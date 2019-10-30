@@ -32,7 +32,7 @@ class AnimationScreen : AppCompatActivity() {
     private var manMode = true
     private var counterStep = 1
 
-    lateinit var animationInAction1: AnimationAction1
+    lateinit var animationInAction1: AnimationAction
 
     val PREFS_NAME = "myPrefs"
     val CURRENT_SPEAKER = "currentSpeakertext10"
@@ -86,7 +86,7 @@ class AnimationScreen : AppCompatActivity() {
         myPref = getSharedPreferences(PREFS_NAME, 0)
         editor = myPref.edit()
         counterStep = myPref.getInt(CURRENT_SPEAKER, 1)
-        animationInAction1 = AnimationAction1(this, mainLayout)
+        animationInAction1 = AnimationAction(this, mainLayout)
 
 
         @Suppress("UNCHECKED_CAST")

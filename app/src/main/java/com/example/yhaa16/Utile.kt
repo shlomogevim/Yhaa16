@@ -4,7 +4,7 @@ import android.content.res.Resources
 import android.widget.TextView
 import com.github.florent37.viewanimator.ViewAnimator
 
-object Utile1 {
+object Utile {
     var wi: Float = Resources.getSystem().displayMetrics.widthPixels.toFloat()
     var hi: Float = Resources.getSystem().displayMetrics.heightPixels.toFloat()
 

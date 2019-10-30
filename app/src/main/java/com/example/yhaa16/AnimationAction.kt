@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.god_layout.view.*
 import kotlinx.android.synthetic.main.man_layout.view.*
 import java.util.*
 
-    class AnimationAction1(context: Context, val view: View) {
+    class AnimationAction(context: Context, val view: View) {
 
         val helper = Helper(context)
         var tv0: TextView? = null
@@ -70,41 +70,41 @@ import java.util.*
 
         private fun letsMove(talker: Talker, listOfTextview: ArrayList<TextView?>, dur: Long) {
             when (talker.animNum) {
-                10 -> Utile1.move_swing(0, talker, listOfTextview, dur)
-                11 -> Utile1.move_swing(1, talker, listOfTextview, dur)
-                12 -> Utile1.move_swing(2, talker, listOfTextview, dur)
-                13 -> Utile1.move_swing(3, talker, listOfTextview, dur)
-                14 -> Utile1.move_swing(4, talker, listOfTextview, dur)
-                15 -> Utile1.move_swing(5, talker, listOfTextview, dur)
+                10 -> Utile.move_swing(0, talker, listOfTextview, dur)
+                11 -> Utile.move_swing(1, talker, listOfTextview, dur)
+                12 -> Utile.move_swing(2, talker, listOfTextview, dur)
+                13 -> Utile.move_swing(3, talker, listOfTextview, dur)
+                14 -> Utile.move_swing(4, talker, listOfTextview, dur)
+                15 -> Utile.move_swing(5, talker, listOfTextview, dur)
 
-                20 -> Utile1.scale_swing(0, talker, listOfTextview, dur)
-                21 -> Utile1.scale_swing(1, talker, listOfTextview, dur)
-                22 -> Utile1.scale_swing(2, talker, listOfTextview, dur)
-                23 -> Utile1.scale_swing(3, talker, listOfTextview, dur)
-                24 -> Utile1.scale_swing(4, talker, listOfTextview, dur)
-                25 -> Utile1.scale_swing(5, talker, listOfTextview, dur)
+                20 -> Utile.scale_swing(0, talker, listOfTextview, dur)
+                21 -> Utile.scale_swing(1, talker, listOfTextview, dur)
+                22 -> Utile.scale_swing(2, talker, listOfTextview, dur)
+                23 -> Utile.scale_swing(3, talker, listOfTextview, dur)
+                24 -> Utile.scale_swing(4, talker, listOfTextview, dur)
+                25 -> Utile.scale_swing(5, talker, listOfTextview, dur)
 
-                30 -> Utile1.move_scale(0, talker, listOfTextview, dur)
-                31 -> Utile1.move_scale(1, talker, listOfTextview, dur)
-                32 -> Utile1.move_scale(2, talker, listOfTextview, dur)
-                33 -> Utile1.move_scale(3, talker, listOfTextview, dur)
-                34 -> Utile1.move_scale(4, talker, listOfTextview, dur)
-                35 -> Utile1.move_scale(5, talker, listOfTextview, dur)
+                30 -> Utile.move_scale(0, talker, listOfTextview, dur)
+                31 -> Utile.move_scale(1, talker, listOfTextview, dur)
+                32 -> Utile.move_scale(2, talker, listOfTextview, dur)
+                33 -> Utile.move_scale(3, talker, listOfTextview, dur)
+                34 -> Utile.move_scale(4, talker, listOfTextview, dur)
+                35 -> Utile.move_scale(5, talker, listOfTextview, dur)
 
 
-                40 -> Utile1.move_scale_rotate(0, talker, listOfTextview, dur)
-                41 -> Utile1.move_scale_rotate(1, talker, listOfTextview, dur)
-                42 -> Utile1.move_scale_rotate(2, talker, listOfTextview, dur)
-                43 -> Utile1.move_scale_rotate(3, talker, listOfTextview, dur)
-                44 -> Utile1.move_scale_rotate(4, talker, listOfTextview, dur)
-                45 -> Utile1.move_scale_rotate(5, talker, listOfTextview, dur)
-                46 -> Utile1.move_scale_rotate(6, talker, listOfTextview, dur)
+                40 -> Utile.move_scale_rotate(0, talker, listOfTextview, dur)
+                41 -> Utile.move_scale_rotate(1, talker, listOfTextview, dur)
+                42 -> Utile.move_scale_rotate(2, talker, listOfTextview, dur)
+                43 -> Utile.move_scale_rotate(3, talker, listOfTextview, dur)
+                44 -> Utile.move_scale_rotate(4, talker, listOfTextview, dur)
+                45 -> Utile.move_scale_rotate(5, talker, listOfTextview, dur)
+                46 -> Utile.move_scale_rotate(6, talker, listOfTextview, dur)
 
-                50 -> Utile1.apeareOneAfterAnother(0, talker, listOfTextview, dur)
-                506 -> Utile1.apeareOneAfterAnother(506, talker, listOfTextview, dur)
+                50 -> Utile.apeareOneAfterAnother(0, talker, listOfTextview, dur)
+                506 -> Utile.apeareOneAfterAnother(506, talker, listOfTextview, dur)
 
-                60 -> Utile1.godAppearFromTwoPlaces(listOfTextview, dur)
-                else->Utile1.move_swing(0, talker, listOfTextview, dur)
+                60 -> Utile.godAppearFromTwoPlaces(listOfTextview, dur)
+                else->Utile.move_swing(0, talker, listOfTextview, dur)
 
             }
 
@@ -249,53 +249,53 @@ import java.util.*
             val listOfTextview = arrayListOf(tv0, tv1, tv2, tv3, tv4, tv5)
             val dur = talker.dur
             when (talker.animNum) {
-                10 -> Utile1.move_swing(0, talker, listOfTextview, dur)
-                11 -> Utile1.move_swing(1, talker, listOfTextview, dur)
-                12 -> Utile1.move_swing(2, talker, listOfTextview, dur)
-                13 -> Utile1.move_swing(3, talker, listOfTextview, dur)
-                14 -> Utile1.move_swing(4, talker, listOfTextview, dur)
-                15 -> Utile1.move_swing(5, talker, listOfTextview, dur)
+                10 -> Utile.move_swing(0, talker, listOfTextview, dur)
+                11 -> Utile.move_swing(1, talker, listOfTextview, dur)
+                12 -> Utile.move_swing(2, talker, listOfTextview, dur)
+                13 -> Utile.move_swing(3, talker, listOfTextview, dur)
+                14 -> Utile.move_swing(4, talker, listOfTextview, dur)
+                15 -> Utile.move_swing(5, talker, listOfTextview, dur)
 
-                20 -> Utile1.scale_swing(0, talker, listOfTextview, dur)
-                21 -> Utile1.scale_swing(1, talker, listOfTextview, dur)
-                22 -> Utile1.scale_swing(2, talker, listOfTextview, dur)
-                23 -> Utile1.scale_swing(3, talker, listOfTextview, dur)
-                24 -> Utile1.scale_swing(4, talker, listOfTextview, dur)
-                25 -> Utile1.scale_swing(5, talker, listOfTextview, dur)
+                20 -> Utile.scale_swing(0, talker, listOfTextview, dur)
+                21 -> Utile.scale_swing(1, talker, listOfTextview, dur)
+                22 -> Utile.scale_swing(2, talker, listOfTextview, dur)
+                23 -> Utile.scale_swing(3, talker, listOfTextview, dur)
+                24 -> Utile.scale_swing(4, talker, listOfTextview, dur)
+                25 -> Utile.scale_swing(5, talker, listOfTextview, dur)
 
-                30 -> Utile1.move_scale(0, talker, listOfTextview, dur)
-                31 -> Utile1.move_scale(1, talker, listOfTextview, dur)
-                32 -> Utile1.move_scale(2, talker, listOfTextview, dur)
-                33 -> Utile1.move_scale(3, talker, listOfTextview, dur)
-                34 -> Utile1.move_scale(4, talker, listOfTextview, dur)
-                35 -> Utile1.move_scale(5, talker, listOfTextview, dur)
-
-
-                40 -> Utile1.move_scale_rotate(0, talker, listOfTextview, dur)
-                41 -> Utile1.move_scale_rotate(1, talker, listOfTextview, dur)
-                42 -> Utile1.move_scale_rotate(2, talker, listOfTextview, dur)
-                43 -> Utile1.move_scale_rotate(3, talker, listOfTextview, dur)
-                44 -> Utile1.move_scale_rotate(4, talker, listOfTextview, dur)
-                45 -> Utile1.move_scale_rotate(5, talker, listOfTextview, dur)
-                46 -> Utile1.move_scale_rotate(6, talker, listOfTextview, dur)
-
-                50 -> Utile1.apeareOneAfterAnother(0, talker, listOfTextview, dur)
+                30 -> Utile.move_scale(0, talker, listOfTextview, dur)
+                31 -> Utile.move_scale(1, talker, listOfTextview, dur)
+                32 -> Utile.move_scale(2, talker, listOfTextview, dur)
+                33 -> Utile.move_scale(3, talker, listOfTextview, dur)
+                34 -> Utile.move_scale(4, talker, listOfTextview, dur)
+                35 -> Utile.move_scale(5, talker, listOfTextview, dur)
 
 
-                /*     10 -> Utile1.scale_swing(0,talker,listOfTextview, dur)
-                 11 -> Utile1.scale_swing(1,talker,listOfTextview, dur)
-                 12 -> Utile1.scale_swing(2,talker,listOfTextview, dur)
-                 13 -> Utile1.scale_swing(3,talker,listOfTextview, dur)
-                  20->Utile1.move_scale(0,listOfTextview,dur)
-                  21->Utile1.move_scale(1,listOfTextview,dur)
-                  22->Utile1.move_scale(2,listOfTextview,dur)
-                  23->Utile1.move_scale(3,listOfTextview,dur)
-                  24->Utile1.move_scale(4,listOfTextview,dur)
-                  25->Utile1.move_scale(5,listOfTextview,dur)
+                40 -> Utile.move_scale_rotate(0, talker, listOfTextview, dur)
+                41 -> Utile.move_scale_rotate(1, talker, listOfTextview, dur)
+                42 -> Utile.move_scale_rotate(2, talker, listOfTextview, dur)
+                43 -> Utile.move_scale_rotate(3, talker, listOfTextview, dur)
+                44 -> Utile.move_scale_rotate(4, talker, listOfTextview, dur)
+                45 -> Utile.move_scale_rotate(5, talker, listOfTextview, dur)
+                46 -> Utile.move_scale_rotate(6, talker, listOfTextview, dur)
+
+                50 -> Utile.apeareOneAfterAnother(0, talker, listOfTextview, dur)
+
+
+                /*     10 -> Utile.scale_swing(0,talker,listOfTextview, dur)
+                 11 -> Utile.scale_swing(1,talker,listOfTextview, dur)
+                 12 -> Utile.scale_swing(2,talker,listOfTextview, dur)
+                 13 -> Utile.scale_swing(3,talker,listOfTextview, dur)
+                  20->Utile.move_scale(0,listOfTextview,dur)
+                  21->Utile.move_scale(1,listOfTextview,dur)
+                  22->Utile.move_scale(2,listOfTextview,dur)
+                  23->Utile.move_scale(3,listOfTextview,dur)
+                  24->Utile.move_scale(4,listOfTextview,dur)
+                  25->Utile.move_scale(5,listOfTextview,dur)
      */
-                400 -> Utile1.scale11(listOfTextview, dur)
-                410 -> Utile1.scale12(listOfTextview, dur)
-                420 -> Utile1.scale13(listOfTextview, dur)
+                400 -> Utile.scale11(listOfTextview, dur)
+                410 -> Utile.scale12(listOfTextview, dur)
+                420 -> Utile.scale13(listOfTextview, dur)
             }
             // fadeDownAllGod(dur)
         }
@@ -321,38 +321,38 @@ import java.util.*
                 arrayListOf(tv0, tv1, tv2, tv3, tv4, tv5, tv0A)
             val dur = talker.dur
             when (talker.animNum) {
-                //  0 -> Utile1.scale10(listOfTextview, dur)
-                //    10 -> Utile1.scale_swing(0,talker,listOfTextview, dur)
-                //    20 -> Utile1.scale12(listOfTextview, dur)
-                //    3 -> Utile1.scale13(listOfTextview, dur)
+                //  0 -> Utile.scale10(listOfTextview, dur)
+                //    10 -> Utile.scale_swing(0,talker,listOfTextview, dur)
+                //    20 -> Utile.scale12(listOfTextview, dur)
+                //    3 -> Utile.scale13(listOfTextview, dur)
 
 
-                4 -> Utile1.godAppearFromTwoPlaces(listOfTextview, dur)
-                10 -> Utile1.scale_swing(0, talker, listOfTextview, dur)
-                11 -> Utile1.scale_swing(1, talker, listOfTextview, dur)
-                12 -> Utile1.scale_swing(2, talker, listOfTextview, dur)
-                13 -> Utile1.scale_swing(3, talker, listOfTextview, dur)
-                20 -> Utile1.move_scale(0, talker, listOfTextview, dur)
-                21 -> Utile1.move_scale(1, talker, listOfTextview, dur)
-                22 -> Utile1.move_scale(2, talker, listOfTextview, dur)
-                23 -> Utile1.move_scale(3, talker, listOfTextview, dur)
-                24 -> Utile1.move_scale(4, talker, listOfTextview, dur)
-                25 -> Utile1.move_scale(5, talker, listOfTextview, dur)
-                30 -> Utile1.move_scale_rotate(0, talker, listOfTextview, dur)
-                31 -> Utile1.move_scale_rotate(1, talker, listOfTextview, dur)
-                32 -> Utile1.move_scale_rotate(2, talker, listOfTextview, dur)
-                33 -> Utile1.move_scale_rotate(3, talker, listOfTextview, dur)
-                34 -> Utile1.move_scale_rotate(4, talker, listOfTextview, dur)
-                35 -> Utile1.move_scale_rotate(5, talker, listOfTextview, dur)
-                36 -> Utile1.move_scale_rotate(6, talker, listOfTextview, dur)
+                4 -> Utile.godAppearFromTwoPlaces(listOfTextview, dur)
+                10 -> Utile.scale_swing(0, talker, listOfTextview, dur)
+                11 -> Utile.scale_swing(1, talker, listOfTextview, dur)
+                12 -> Utile.scale_swing(2, talker, listOfTextview, dur)
+                13 -> Utile.scale_swing(3, talker, listOfTextview, dur)
+                20 -> Utile.move_scale(0, talker, listOfTextview, dur)
+                21 -> Utile.move_scale(1, talker, listOfTextview, dur)
+                22 -> Utile.move_scale(2, talker, listOfTextview, dur)
+                23 -> Utile.move_scale(3, talker, listOfTextview, dur)
+                24 -> Utile.move_scale(4, talker, listOfTextview, dur)
+                25 -> Utile.move_scale(5, talker, listOfTextview, dur)
+                30 -> Utile.move_scale_rotate(0, talker, listOfTextview, dur)
+                31 -> Utile.move_scale_rotate(1, talker, listOfTextview, dur)
+                32 -> Utile.move_scale_rotate(2, talker, listOfTextview, dur)
+                33 -> Utile.move_scale_rotate(3, talker, listOfTextview, dur)
+                34 -> Utile.move_scale_rotate(4, talker, listOfTextview, dur)
+                35 -> Utile.move_scale_rotate(5, talker, listOfTextview, dur)
+                36 -> Utile.move_scale_rotate(6, talker, listOfTextview, dur)
 
 
-                40 -> Utile1.scale11(listOfTextview, dur)
-                41 -> Utile1.scale12(listOfTextview, dur)
-                42 -> Utile1.scale13(listOfTextview, dur)
+                40 -> Utile.scale11(listOfTextview, dur)
+                41 -> Utile.scale12(listOfTextview, dur)
+                42 -> Utile.scale13(listOfTextview, dur)
 
 
-                50 -> Utile1.apeareOneAfterAnother(0, talker, listOfTextview, dur)
+                50 -> Utile.apeareOneAfterAnother(0, talker, listOfTextview, dur)
 
             }
         }
@@ -405,10 +405,10 @@ import java.util.*
                arrayListOf(tv0, tv1, tv2, tv3, tv4, tv5)
            val dur = talker.dur
            when (talker.animNum) {
-               0 -> Utile1.scale60A(listOfTextview, dur)
-               1 -> Utile1.scale61A(listOfTextview, dur)
-               2 -> Utile1.scale62A(listOfTextview, dur)
-               3 -> Utile1.scale63A(listOfTextview, dur)
+               0 -> Utile.scale60A(listOfTextview, dur)
+               1 -> Utile.scale61A(listOfTextview, dur)
+               2 -> Utile.scale62A(listOfTextview, dur)
+               3 -> Utile.scale63A(listOfTextview, dur)
 
            }
            fadeDownAllGod(dur)
