@@ -1,180 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title_situation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:elevation="1dp"
-        android:text="Man=true round=15"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<TextView
+    android:id="@+id/title_situation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:elevation="1dp"
+    android:text="Man=true round=15"
+    android:textColor="@android:color/white"
+    android:textSize="18sp"
+    android:visibility="gone"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/counter_situation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:elevation="1dp"
-        android:text="counter=0"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_situation" />
+<TextView
+    android:id="@+id/counter_situation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:elevation="1dp"
+    android:text="counter=0"
+    android:textColor="@android:color/white"
+    android:textSize="30sp"
+    android:visibility="gone"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/title_situation" />
 
-    <TextView
-        android:id="@+id/tvAnimatinKind"
-        android:layout_width="wrap_content"
+<TextView
+    android:id="@+id/tvAnimatinKind"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:background="@color/black"
+    android:text="Talk parameter"
+    android:textColor="@android:color/white"
+    android:textSize="14sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<TextView
+    android:id="@+id/tvPage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:background="@color/black"
+    android:gravity="center"
+    android:text="10"
+    android:textColor="@android:color/white"
+    android:textSize="24sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/currentParameterTv" />
+
+<ListView
+    android:id="@+id/animView"
+    android:layout_width="60dp"
+    android:layout_height="0dp"
+    android:elevation="30dp"
+    app:layout_constraintBottom_toTopOf="@+id/tvAnimatinKind"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvPage" />
+
+<ListView
+    android:id="@+id/actioAnimLv"
+    android:layout_width="60dp"
+    android:layout_height="0dp"
+    android:elevation="30dp"
+    android:visibility="visible"
+    app:layout_constraintBottom_toTopOf="@+id/tvAnimatinKind"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvPage">
+
+</ListView>
+
+<SeekBar
+    android:id="@+id/seekBarTextSize"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:elevation="20dp"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/seekBarDuration"
+    app:layout_constraintTop_toBottomOf="@+id/seekBarDuration" />
+
+<SeekBar
+    android:id="@+id/seekBarDuration"
+    android:layout_width="0dp"
+    android:layout_height="13dp"
+    android:layout_marginEnd="4dp"
+    android:elevation="20dp"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/tvPage"
+    app:layout_constraintTop_toBottomOf="@+id/currentParameterTv" />
+
+<TextView
+    android:id="@+id/currentParameterTv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:text="Current parameter"
+    android:textColor="@android:color/white"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+        android:id="@+id/previousButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:background="@color/black"
-        android:text="Talk parameter"
-        android:textColor="@android:color/white"
+        android:layout_weight="1"
+        android:text="Prev"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/tvPage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:background="@color/black"
-        android:gravity="center"
-        android:text="10"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentParameterTv" />
-
-    <ListView
-        android:id="@+id/animView"
-        android:layout_width="60dp"
-        android:layout_height="0dp"
-        android:elevation="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvAnimatinKind"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPage" />
-
-    <ListView
-        android:id="@+id/actioAnimLv"
-        android:layout_width="60dp"
-        android:layout_height="0dp"
-        android:elevation="30dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/tvAnimatinKind"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPage">
-
-    </ListView>
-
-    <SeekBar
-        android:id="@+id/seekBarTextSize"
+    <Button
+        android:id="@+id/init_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="4dp"
-        android:elevation="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/seekBarDuration"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarDuration" />
+        android:layout_weight="1"
+        android:text="Init" />
 
-    <SeekBar
-        android:id="@+id/seekBarDuration"
+    <Button
+        android:id="@+id/btnTry"
         android:layout_width="0dp"
-        android:layout_height="13dp"
-        android:layout_marginEnd="4dp"
-        android:elevation="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvPage"
-        app:layout_constraintTop_toBottomOf="@+id/currentParameterTv" />
-
-    <TextView
-        android:id="@+id/seekBarTextviewDuaration"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:elevation="10dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarDuration" />
+        android:layout_weight="1"
+        android:text="Try" />
 
-    <TextView
-        android:id="@+id/currentParameterTv"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:text="Current parameter"
-        android:textColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="1"
+        android:text="Save"
+        android:textSize="14sp"
+        android:visibility="visible" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:text="Next"
+        android:textSize="14sp"
+        android:visibility="visible" />
 
-        <Button
-            android:id="@+id/previousButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Prev"
-            android:textSize="14sp"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/init_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Init" />
-
-        <Button
-            android:id="@+id/btnTry"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Try" />
-
-        <Button
-            android:id="@+id/saveButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Save"
-            android:textSize="14sp"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/nextButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_weight="1"
-            android:text="Next"
-            android:textSize="14sp"
-            android:visibility="visible" />
-
-    </LinearLayout>
+</LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

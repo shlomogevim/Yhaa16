@@ -10,7 +10,7 @@
     >
 
 
-    <include layout="@layout/current_position_layout"/>0
+    <include layout="@layout/current_position_layout1"/>0
     <include layout="@layout/god_layout" />
 
     <include layout="@layout/man_layout" />
