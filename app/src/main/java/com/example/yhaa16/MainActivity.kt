@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         getStyleData()
         sendData()
     }
+
     private fun sendData() {
         val intent = Intent(this, AnimationScreen::class.java)
 
@@ -38,16 +39,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getStyleData() {
-        var countStyle=1
+        var countStyle = 1
         var text = applicationContext.assets.open(STYLE_FILE).bufferedReader().use {
             it.readText()
         }
         text = text.replace("\r", "")
         var list = text.split("#")
-        operateList= arrayListOf()
+        operateList = arrayListOf()
         operateList.add(0, arrayListOf())
-        for (element in list){
-            if (element!=""){
+        for (element in list) {
+            if (element != "") {
                 var ar = element.split(",")
                 operateList.add(
                     countStyle,
@@ -89,30 +90,42 @@ class MainActivity : AppCompatActivity() {
                 countItem++
 
                 talker = Talker()
-                talker.whoSpeake = "man"
-                st1=st1.trim()
-                talker.taking = st1
-                talker.num=countItem
-                var arr = st1.split("\n")
-                talker.lines = arr.size
+                with(talker) {
+                    whoSpeake = "man"
+                    taking = st1.trim()
+                    num = countItem
+                    var arr = st1.split("\n")
+                    for (item in arr) {
+                        if (item != "") {
+                            takingArray.add(item)
+                        }
+                    }
+                    lines = takingArray.size
+                }
                 talkerList.add(talker)
 
-
                 countItem++
-
                 talker = Talker()
-                talker.whoSpeake = "god"
-                talker.taking = st2
-                talker.num=countItem
-                arr = st2.split("\n")
-                talker.lines = arr.size
+                with (talker) {
+                    whoSpeake = "god"
+                    talker.taking = st2.trim()
+                    talker.num = countItem
+                    var arr = st2.split("\n")
+                    for (item in arr) {
+                        if (item != "") {
+                            takingArray.add(item)
+                        }
+                    }
+                    talker.lines = takingArray.size
+                }
                 talkerList.add(talker)
             }
         }
 
     }
-    private fun improveString(st: String) = st.substring(1, st.length - 1)
 
+
+    private fun improveString(st: String) = st.substring(1, st.length - 1)
 
 
 }

@@ -68,6 +68,20 @@ class AnimationScreen : AppCompatActivity() {
         generalOperation()     // Let's play
     }
 
+    private fun generalOperation() {
+
+        if (counterStep < 1) counterStep = 1
+
+        counterStep = 1           //*********************
+
+        manMode = counterStep % 2 != 0
+
+        val talker = talkList[counterStep]
+        tranferValue(0)
+        updateTitleTalkerSituation()
+        animationInAction1.excuteTalker(talker)
+
+    }
     private fun saveData() {
         var gson = Gson()
         var jsonString = gson.toJson(operateList)
@@ -145,20 +159,6 @@ class AnimationScreen : AppCompatActivity() {
     }
 
 
-    private fun generalOperation() {
-
-        if (counterStep < 1) counterStep = 1
-
-        counterStep = 1           //*********************
-
-        manMode = counterStep % 2 != 0
-
-        val talker = talkList[counterStep]
-        tranferValue(0)
-        updateTitleTalkerSituation()
-        animationInAction1.excuteTalker(talker)
-
-    }
 
     private fun firstListViewScrolling() {
         animView.setSelection(15)
@@ -208,7 +208,7 @@ class AnimationScreen : AppCompatActivity() {
         val talker = talkList[counterStep]
         with(talker) {
             var text =
-                "l/->$lines style->$styleNum anim->$animNum size->$textSize dur->$dur $whoSpeake"
+                "line->$lines style->$styleNum anim->$animNum size->$textSize dur->$dur $whoSpeake"
             tvAnimatinKind.text = text
         }
         tvPage.text = counterStep.toString()
@@ -227,13 +227,22 @@ class AnimationScreen : AppCompatActivity() {
             } else {
                 styleNum = current_styleNum
                 animNum = current_animNum
-                if (current_dur > 100) dur = current_dur
-                if (current_styleNum > 100) textSize = current_textSize
+                if (current_dur > 100) {
+                    dur = current_dur
+                }else {
+                    current_dur = 100
+                }
+                if (current_textSize>10) {
+                    textSize = current_textSize
+                }else{
+                        current_textSize=10f
+                    }
+                }
             }
         }
 
 
-    }
+
 
     private fun buttonZone() {
         animView.setOnItemClickListener { parent, view, position, id ->
@@ -312,8 +321,8 @@ class AnimationScreen : AppCompatActivity() {
             tranferValue(1)
             generalOperation()
         }
-        butTP10.setOnClickListener {
-            current_textSize = current_textSize + 10
+        butTP20.setOnClickListener {
+            current_textSize = current_textSize + 20
             tranferValue(1)
             generalOperation()
         }
@@ -328,8 +337,8 @@ class AnimationScreen : AppCompatActivity() {
             tranferValue(1)
             generalOperation()
         }
-        butTM10.setOnClickListener {
-            current_textSize = current_textSize - 10
+        butTM20.setOnClickListener {
+            current_textSize = current_textSize - 20
             tranferValue(1)
             generalOperation()
         }

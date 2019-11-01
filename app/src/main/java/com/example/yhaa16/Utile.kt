@@ -546,14 +546,14 @@ object Utile {
     }
 
 
-    fun godAppearFromTwoPlaces(arr: ArrayList<TextView?>, dur: Long) {
+    fun godAppearFromTwoPlaces(arr: ArrayList<TextView?>,arr1: ArrayList<TextView?>,dur: Long) {
 
         ViewAnimator
             .animate(arr[0])
             .translationX(-wi / 2, 0f)
             .translationY(hi, 0f)
             .scale(0f, 1f)
-            .andAnimate(arr[1])
+            .andAnimate(arr1[0])
             .translationX(wi / 2, 0f)
             .translationY(hi, 0f)
             .scale(0f, 1f)
