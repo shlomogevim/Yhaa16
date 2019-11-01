@@ -84,12 +84,12 @@ import java.util.*
                 24 -> Utile.scale_swing(4, talker, listOfTextview, dur)
                 25 -> Utile.scale_swing(5, talker, listOfTextview, dur)
 
-                30 -> Utile.move_scale(0, talker, listOfTextview, dur)
-                31 -> Utile.move_scale(1, talker, listOfTextview, dur)
-                32 -> Utile.move_scale(2, talker, listOfTextview, dur)
-                33 -> Utile.move_scale(3, talker, listOfTextview, dur)
-                34 -> Utile.move_scale(4, talker, listOfTextview, dur)
-                35 -> Utile.move_scale(5, talker, listOfTextview, dur)
+                30 -> Utile.move_scale(0,  listOfTextview, dur)
+                31 -> Utile.move_scale(1,  listOfTextview, dur)
+                32 -> Utile.move_scale(2,  listOfTextview, dur)
+                33 -> Utile.move_scale(3,  listOfTextview, dur)
+                34 -> Utile.move_scale(4,  listOfTextview, dur)
+                35 -> Utile.move_scale(5,  listOfTextview, dur)
 
 
                 40 -> Utile.move_scale_rotate(0, talker, listOfTextview, dur)
@@ -100,8 +100,8 @@ import java.util.*
                 45 -> Utile.move_scale_rotate(5, talker, listOfTextview, dur)
                 46 -> Utile.move_scale_rotate(6, talker, listOfTextview, dur)
 
-                50 -> Utile.apeareOneAfterAnother(0, talker, listOfTextview, dur)
-                506 -> Utile.apeareOneAfterAnother(506, talker, listOfTextview, dur)
+                50 -> Utile.apeareOneAfterAnother(0,  listOfTextview, dur)
+                506 -> Utile.apeareOneAfterAnother(506,  listOfTextview, dur)
 
                 60 -> Utile.godAppearFromTwoPlaces(listOfTextview, dur)
                 else->Utile.move_swing(0, talker, listOfTextview, dur)
@@ -263,12 +263,12 @@ import java.util.*
                 24 -> Utile.scale_swing(4, talker, listOfTextview, dur)
                 25 -> Utile.scale_swing(5, talker, listOfTextview, dur)
 
-                30 -> Utile.move_scale(0, talker, listOfTextview, dur)
-                31 -> Utile.move_scale(1, talker, listOfTextview, dur)
-                32 -> Utile.move_scale(2, talker, listOfTextview, dur)
-                33 -> Utile.move_scale(3, talker, listOfTextview, dur)
-                34 -> Utile.move_scale(4, talker, listOfTextview, dur)
-                35 -> Utile.move_scale(5, talker, listOfTextview, dur)
+                30 -> Utile.move_scale(0,  listOfTextview, dur)
+                31 -> Utile.move_scale(1,  listOfTextview, dur)
+                32 -> Utile.move_scale(2,  listOfTextview, dur)
+                33 -> Utile.move_scale(3,  listOfTextview, dur)
+                34 -> Utile.move_scale(4,  listOfTextview, dur)
+                35 -> Utile.move_scale(5,  listOfTextview, dur)
 
 
                 40 -> Utile.move_scale_rotate(0, talker, listOfTextview, dur)
@@ -279,7 +279,7 @@ import java.util.*
                 45 -> Utile.move_scale_rotate(5, talker, listOfTextview, dur)
                 46 -> Utile.move_scale_rotate(6, talker, listOfTextview, dur)
 
-                50 -> Utile.apeareOneAfterAnother(0, talker, listOfTextview, dur)
+                50 -> Utile.apeareOneAfterAnother(0,  listOfTextview, dur)
 
 
                 /*     10 -> Utile.scale_swing(0,talker,listOfTextview, dur)
@@ -332,12 +332,12 @@ import java.util.*
                 11 -> Utile.scale_swing(1, talker, listOfTextview, dur)
                 12 -> Utile.scale_swing(2, talker, listOfTextview, dur)
                 13 -> Utile.scale_swing(3, talker, listOfTextview, dur)
-                20 -> Utile.move_scale(0, talker, listOfTextview, dur)
-                21 -> Utile.move_scale(1, talker, listOfTextview, dur)
-                22 -> Utile.move_scale(2, talker, listOfTextview, dur)
-                23 -> Utile.move_scale(3, talker, listOfTextview, dur)
-                24 -> Utile.move_scale(4, talker, listOfTextview, dur)
-                25 -> Utile.move_scale(5, talker, listOfTextview, dur)
+                20 -> Utile.move_scale(0,  listOfTextview, dur)
+                21 -> Utile.move_scale(1,  listOfTextview, dur)
+                22 -> Utile.move_scale(2,  listOfTextview, dur)
+                23 -> Utile.move_scale(3,  listOfTextview, dur)
+                24 -> Utile.move_scale(4,  listOfTextview, dur)
+                25 -> Utile.move_scale(5,  listOfTextview, dur)
                 30 -> Utile.move_scale_rotate(0, talker, listOfTextview, dur)
                 31 -> Utile.move_scale_rotate(1, talker, listOfTextview, dur)
                 32 -> Utile.move_scale_rotate(2, talker, listOfTextview, dur)
@@ -352,7 +352,7 @@ import java.util.*
                 42 -> Utile.scale13(listOfTextview, dur)
 
 
-                50 -> Utile.apeareOneAfterAnother(0, talker, listOfTextview, dur)
+                50 -> Utile.apeareOneAfterAnother(0,  listOfTextview, dur)
 
             }
         }
