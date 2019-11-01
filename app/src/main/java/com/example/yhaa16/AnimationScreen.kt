@@ -126,7 +126,13 @@ class AnimationScreen : AppCompatActivity() {
         for (i in 0..15) {
             actionAnimList.add("1")
         }
-        val list = arrayListOf("4", "10", "20", "30", "40", "50", "60")
+        val list = arrayListOf("4",
+            "10","11","12","13","14","15",
+            "20","21","22","23","24","25",
+            "30","31","32","33","34","35",
+            "40","41","42","43","44","45","46",
+            "50","51","52","53","54","55","506",
+            "60","61","62","63","64","65")
         actionAnimList.addAll(list)
         for (i in 0..15) {
             actionAnimList.add("1000")
@@ -134,7 +140,8 @@ class AnimationScreen : AppCompatActivity() {
         val adapter1 =
             ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, actionAnimList)
         actioAnimLv.adapter = adapter1
-
+        animView.setSelection(15)
+        actioAnimLv.setSelection(15)
     }
 
 
@@ -150,7 +157,6 @@ class AnimationScreen : AppCompatActivity() {
         tranferValue(0)
         updateTitleTalkerSituation()
         animationInAction1.excuteTalker(talker)
-        firstListViewScrolling()
 
     }
 

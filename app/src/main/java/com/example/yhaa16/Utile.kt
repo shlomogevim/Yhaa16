@@ -230,7 +230,7 @@ object Utile {
 
     }
 
-    fun move_scale(selector: Int, talker: Talker, arr: ArrayList<TextView?>, dur: Long) {
+    fun ללללmove_scale(selector: Int, talker: Talker, arr: ArrayList<TextView?>, dur: Long) {
 
         val linesNum = talker.lines
         if (selector == 0) {
