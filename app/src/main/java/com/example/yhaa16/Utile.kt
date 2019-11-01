@@ -1,7 +1,6 @@
 package com.example.yhaa16
 
 import android.content.res.Resources
-import android.util.Log
 import android.widget.TextView
 import com.github.florent37.viewanimator.ViewAnimator
 
@@ -12,27 +11,27 @@ object Utile {
 
     fun item_scale(ind: Int, textView: TextView, dur: Long) {
 
-      if (ind>-7) {
-          ViewAnimator
-              .animate(textView)
-              .scale(0f, 1f)
-              .duration(dur)
-              .start()
-      }
+        if (ind > -7) {
+            ViewAnimator
+                .animate(textView)
+                .scale(0f, 1f)
+                .duration(dur)
+                .start()
+        }
     }
 
     fun item_scale_swing(ind: Int, textView: TextView, dur: Long) {
 
-       if (ind>-7) {
-           ViewAnimator
-               .animate(textView)
-               .scale(0f, 1f)
-               .duration(dur)
-               .thenAnimate(textView)
-               .swing()
-               .repeatCount(1)
-               .start()
-       }
+        if (ind > -7) {
+            ViewAnimator
+                .animate(textView)
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(textView)
+                .swing()
+                .repeatCount(1)
+                .start()
+        }
     }
 
     fun item_move(ind: Int, textView: TextView, dur: Long) {
@@ -238,7 +237,6 @@ object Utile {
     }
 
 
-
     fun move_scale_rotate(selector: Int, talker: Talker, arr: ArrayList<TextView?>, dur: Long) {
         val linesNum = talker.lines
         if (selector == 0) {
@@ -351,122 +349,203 @@ object Utile {
         }
     }
 
-    fun apeareOneAfterAnother(ind: Int,  arr: ArrayList<TextView?>, dur: Long) {
-        if (ind == 0) {
-            if (arr.size == 1) {
-                ViewAnimator
-                    .animate(arr[0])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .start()
-            }
-
-            if (arr.size == 2) {
-                ViewAnimator
-                    .animate(arr[0])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[1])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .start()
-            }
-            if (arr.size == 3) {
-                ViewAnimator
-                    .animate(arr[0])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[1])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[2])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .start()
-            }
-            if (arr.size == 4) {
-                ViewAnimator
-                    .animate(arr[0])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[1])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[2])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[3])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .start()
-            }
-            if (arr.size == 5) {
-                ViewAnimator
-                    .animate(arr[0])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[1])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[2])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[3])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[4])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .start()
-            }
-            if (arr.size == 6) {
-                ViewAnimator
-                    .animate(arr[0])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[1])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[2])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[3])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[4])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[5])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .start()
-            }
+    fun apeareOneAfterAnother(arr: ArrayList<TextView?>, dur: Long) {
+        if (arr.size == 1) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .start()
         }
-        if (ind==506){
-                ViewAnimator
-                    .animate(arr[0])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[1])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[2])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[3])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[4])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[5])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[5])
-                    .swing()
-                    .start()
+
+        if (arr.size == 2) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .start()
+        }
+        if (arr.size == 3) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .start()
+        }
+        if (arr.size == 4) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[3])
+                .scale(0f, 1f)
+                .duration(dur)
+                .start()
+        }
+        if (arr.size == 5) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[3])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[4])
+                .scale(0f, 1f)
+                .duration(dur)
+                .start()
+        }
+        if (arr.size == 6) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[3])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[4])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .scale(0f, 1f)
+                .duration(dur)
+                .start()
+        }
+
+    }
+
+    fun apeareOneAfterAnotherAndSwing(arr: ArrayList<TextView?>, dur: Long) {
+        if (arr.size == 1) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .swing()
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .swing()
+                .start()
+        }
+
+        if (arr.size == 2) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .swing()
+                .start()
+        }
+        if (arr.size == 3) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .swing()
+                .start()
+        }
+        if (arr.size == 4) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[3])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .swing()
+                .start()
+        }
+        if (arr.size == 5) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[3])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[4])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .swing()
+                .start()
+        }
+        if (arr.size == 6) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[3])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[4])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .swing()
+                .start()
         }
     }
+
+
     fun godAppearFromTwoPlaces(arr: ArrayList<TextView?>, dur: Long) {
 
         ViewAnimator
@@ -909,8 +988,6 @@ object Utile {
                  }*//*
 
     }*/
-
-
 
 
     fun moveAndRotate3(kind: Int, arr: ArrayList<TextView?>, dur: Long) {
