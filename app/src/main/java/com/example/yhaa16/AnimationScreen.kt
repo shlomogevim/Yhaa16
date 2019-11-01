@@ -68,6 +68,21 @@ class AnimationScreen : AppCompatActivity() {
         generalOperation()     // Let's play
     }
 
+    private fun generalOperation() {
+
+        if (counterStep < 1) counterStep = 1
+
+        counterStep = 1           //*********************
+
+        manMode = counterStep % 2 != 0
+
+        val talker = talkList[counterStep]
+        tranferValue(0)
+
+        animationInAction1.excuteTalker(talker)
+
+    }
+
     private fun saveData() {
         var gson = Gson()
         var jsonString = gson.toJson(operateList)
@@ -145,20 +160,6 @@ class AnimationScreen : AppCompatActivity() {
     }
 
 
-    private fun generalOperation() {
-
-        if (counterStep < 1) counterStep = 1
-
-        counterStep = 1           //*********************
-
-        manMode = counterStep % 2 != 0
-
-        val talker = talkList[counterStep]
-        tranferValue(0)
-        updateTitleTalkerSituation()
-        animationInAction1.excuteTalker(talker)
-
-    }
 
     private fun firstListViewScrolling() {
         animView.setSelection(15)
@@ -232,7 +233,7 @@ class AnimationScreen : AppCompatActivity() {
             }
         }
 
-
+        updateTitleTalkerSituation()
     }
 
     private fun buttonZone() {

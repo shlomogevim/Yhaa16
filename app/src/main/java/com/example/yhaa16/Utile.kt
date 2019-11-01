@@ -9,8 +9,7 @@ object Utile {
     var hi: Float = Resources.getSystem().displayMetrics.heightPixels.toFloat()
 
 
-    fun item_scale(ind: Int, textView: TextView, dur: Long) {
-
+    private fun item_scale(textView: TextView, dur: Long) {
         ViewAnimator
             .animate(textView)
             .scale(0f, 1f)
@@ -18,8 +17,7 @@ object Utile {
             .start()
     }
 
-    fun item_scale_swing(ind: Int, textView: TextView, dur: Long) {
-
+    private fun item_scale_swing(textView: TextView, dur: Long) {
         ViewAnimator
             .animate(textView)
             .scale(0f, 1f)
@@ -30,28 +28,20 @@ object Utile {
             .start()
     }
 
-    fun item_move(ind: Int, textView: TextView, dur: Long) {
-        var arr = getCordinateAndSpine(ind)
-
+   private fun item_move(ind: Int, textView: TextView, dur: Long) {
+        val arr = getCordinateAndSpine(ind)
         ViewAnimator
             .animate(textView)
-            .scale(1f)
-            .duration(1)
-            .thenAnimate(textView)
             .translationX(arr[0], 0f)
             .translationY(arr[1], 0f)
             .duration(dur)
             .start()
     }
 
-    fun item_move_swing(ind: Int, textView: TextView, dur: Long) {
-        var arr = getCordinateAndSpine(ind)
-
+    private fun item_move_swing(ind: Int, textView: TextView, dur: Long) {
+        val arr = getCordinateAndSpine(ind)
         ViewAnimator
             .animate(textView)
-            .scale(1f)
-            .duration(1)
-            .thenAnimate(textView)
             .translationX(arr[0], 0f)
             .translationY(arr[1], 0f)
             .duration(dur)
@@ -61,8 +51,8 @@ object Utile {
             .start()
     }
 
-    fun item_move_scale(ind: Int, textView: TextView, dur: Long) {
-        var arr = getCordinateAndSpine(ind)
+    private fun item_move_scale(ind: Int, textView: TextView, dur: Long) {
+        val arr = getCordinateAndSpine(ind)
 
         ViewAnimator
             .animate(textView)
@@ -73,8 +63,8 @@ object Utile {
             .start()
     }
 
-    fun item_move_scale_rotate(ind: Int, textView: TextView, dur: Long) {
-        var arr = getCordinateAndSpine(ind)
+    private fun item_move_scale_rotate(ind: Int, textView: TextView, dur: Long) {
+        val arr = getCordinateAndSpine(ind)
 
         ViewAnimator
             .animate(textView)
@@ -87,8 +77,8 @@ object Utile {
     }
 
     fun move_swing(selector: Int, talker: Talker, arr: ArrayList<TextView?>, dur: Long) {
-
         val linesNum = talker.lines
+
         if (selector == 0) {
             for (index in 1..linesNum) {
                 item_move(index, arr[index - 1]!!, dur)
@@ -162,7 +152,7 @@ object Utile {
         val linesNum = talker.lines
         if (selector == 0) {
             for (index in 0 until linesNum) {
-                arr[index]?.let { item_scale(index + 1, it, dur) }
+                arr[index]?.let { item_scale(it, dur) }
             }
         }
 
@@ -170,9 +160,9 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index == 1) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
-                        item_scale_swing(index, it, dur)
+                        item_scale_swing(it, dur)
 
                     }
                 }
@@ -182,9 +172,9 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 2) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
-                        item_scale_swing(index, it, dur)
+                        item_scale_swing(it, dur)
 
                     }
                 }
@@ -194,9 +184,9 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 3) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
-                        item_scale_swing(index, it, dur)
+                        item_scale_swing(it, dur)
 
                     }
                 }
@@ -206,9 +196,9 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 4) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
-                        item_scale_swing(index, it, dur)
+                        item_scale_swing(it, dur)
 
                     }
                 }
@@ -218,9 +208,9 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 5) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
-                        item_scale_swing(index, it, dur)
+                        item_scale_swing(it, dur)
 
                     }
                 }
@@ -230,7 +220,8 @@ object Utile {
 
     }
 
-    fun ללללmove_scale(selector: Int, talker: Talker, arr: ArrayList<TextView?>, dur: Long) {
+
+    fun move_scale(selector: Int, talker: Talker, arr: ArrayList<TextView?>, dur: Long) {
 
         val linesNum = talker.lines
         if (selector == 0) {
@@ -243,7 +234,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index == 1) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale(index, it, dur)
 
@@ -255,7 +246,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 2) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale(index, it, dur)
 
@@ -267,7 +258,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 3) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale(index, it, dur)
 
@@ -279,7 +270,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 4) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale(index, it, dur)
 
@@ -291,7 +282,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 5) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale(index, it, dur)
 
@@ -307,7 +298,7 @@ object Utile {
                     if (index <= talker.lines - 1) {
                         item_move_scale(index, it, dur)
                     } else {
-                        item_scale_swing(index, it, dur)
+                        item_scale_swing(it, dur)
                     }
                 }
             }
@@ -327,7 +318,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index == 1) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale_rotate(index, it, dur)
 
@@ -339,7 +330,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 2) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale_rotate(index, it, dur)
 
@@ -351,7 +342,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 3) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale_rotate(index, it, dur)
 
@@ -363,7 +354,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 4) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale_rotate(index, it, dur)
 
@@ -375,7 +366,7 @@ object Utile {
             for (index in 1..linesNum) {
                 arr[index - 1]?.let {
                     if (index <= 5) {
-                        item_scale(index, it, dur)
+                        item_scale(it, dur)
                     } else {
                         item_move_scale_rotate(index, it, dur)
 
@@ -391,7 +382,7 @@ object Utile {
                     if (index <= talker.lines - 1) {
                         item_move_scale_rotate(index, it, dur)
                     } else {
-                        item_scale_swing(index, it, dur)
+                        item_scale_swing(it, dur)
                     }
                 }
             }
@@ -489,31 +480,32 @@ object Utile {
                     .start()
             }
         }
-        if (ind==506){
-                ViewAnimator
-                    .animate(arr[0])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[1])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[2])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[3])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[4])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[5])
-                    .scale(0f, 1f)
-                    .duration(dur)
-                    .thenAnimate(arr[5])
-                    .swing()
-                    .start()
+        if (ind == 506) {
+            ViewAnimator
+                .animate(arr[0])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[1])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[2])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[3])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[4])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .scale(0f, 1f)
+                .duration(dur)
+                .thenAnimate(arr[5])
+                .swing()
+                .start()
         }
     }
+
     fun godAppearFromTwoPlaces(arr: ArrayList<TextView?>, dur: Long) {
 
         ViewAnimator
@@ -745,7 +737,7 @@ object Utile {
 
         if (selector == 0) {
             for (index in 0 until arr.size) {
-                arr[index]?.let { item_scale(index + 1, it, dur) }
+                arr[index]?.let { item_scale(it, dur) }
             }
         }
 
@@ -763,7 +755,7 @@ object Utile {
                     if (index > 0) {
                         item_move_scale(index + 1, it, dur)
                     } else {
-                        item_scale(index + 1, it, dur)
+                        item_scale(it, dur)
                     }
                 }
             }
@@ -774,7 +766,7 @@ object Utile {
                     if (index > 1) {
                         item_move_scale(index + 1, it, dur)
                     } else {
-                        item_scale(index + 1, it, dur)
+                        item_scale(it, dur)
                     }
                 }
             }
@@ -785,7 +777,7 @@ object Utile {
                     if (index > 2) {
                         item_move_scale(index + 1, it, dur)
                     } else {
-                        item_scale(index + 1, it, dur)
+                        item_scale(it, dur)
                     }
                 }
             }
@@ -796,7 +788,7 @@ object Utile {
                     if (index > 3) {
                         item_move_scale(index + 1, it, dur)
                     } else {
-                        item_scale(index + 1, it, dur)
+                        item_scale(it, dur)
                     }
                 }
             }
@@ -807,7 +799,7 @@ object Utile {
                     if (index > 4) {
                         item_move_scale(index + 1, it, dur)
                     } else {
-                        item_scale(index + 1, it, dur)
+                        item_scale(it, dur)
                     }
                 }
             }
@@ -879,8 +871,6 @@ object Utile {
                  }*//*
 
     }*/
-
-
 
 
     fun moveAndRotate3(kind: Int, arr: ArrayList<TextView?>, dur: Long) {
