@@ -1,15 +1,16 @@
 package com.example.yhaa16
 
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import com.github.florent37.viewanimator.ViewAnimator
 import kotlinx.android.synthetic.main.god_layout.view.*
 import kotlinx.android.synthetic.main.man_layout.view.*
 import java.util.*
 
-class AnimationAction(context: Context, val view: View) {
+class AnimationAction(val context: Context, val view: View) {
 
     val helper = Helper(context)
     var tv0: TextView? = null
@@ -115,9 +116,9 @@ class AnimationAction(context: Context, val view: View) {
             50 -> Utile.apeareOneAfterAnother(listOfTextview, dur)
             51 -> Utile.apeareOneAfterAnotherAndSwing(listOfTextview, dur)
 
-            60 -> if (talker.whoSpeake=="god") {
+            60 -> if (talker.whoSpeake == "god") {
                 Utile.godAppearFromTwoPlaces(listOfTextview, listOfTextviewM, dur)
-            } else{
+            } else {
                 Utile.move_swing(0, talker, listOfTextview, dur)
             }
             else -> Utile.move_swing(0, talker, listOfTextview, dur)
@@ -133,8 +134,8 @@ class AnimationAction(context: Context, val view: View) {
         val arr = st.split("\n")
         val size = arr.size*/
 
-        val arr=talker.takingArray
-        val size=arr.size
+        val arr = talker.takingArray
+        val size = arr.size
 
         tv0 = styleTextViewTalk1(god0, arr[0], talker)
         //  if (talker.animNum == 60) {
@@ -152,12 +153,12 @@ class AnimationAction(context: Context, val view: View) {
     private fun configManTextView1(talker: Talker) {
         initTextview()
         initManTextview(1)
-       /* val st = talker.taking
-        val arr = st.split("\n")
-        val size = talker.lines
-*/
-        val arr=talker.takingArray
-        val size=arr.size
+        /* val st = talker.taking
+         val arr = st.split("\n")
+         val size = talker.lines
+ */
+        val arr = talker.takingArray
+        val size = arr.size
         if (size == 6) {
             tv0 = styleTextViewTalk1(man0, arr[0], talker)
             if (size > 1) tv1 = styleTextViewTalk1(man1, arr[1], talker)
@@ -215,21 +216,32 @@ class AnimationAction(context: Context, val view: View) {
         val textSize = talker.textSize
         var textView = tv
         val style = findStyleObject(num)
-
         with(style) {
+
+            var shape = GradientDrawable()
+            shape.cornerRadius = 50f
+
             if (colorBack == "none") {
-                textView.setBackgroundResource(android.R.color.transparent)
+                //  textView.setBackgroundResource(android.R.color.transparent)
+                shape.setColor(Color.parseColor(android.R.color.transparent.toString()))
+
             } else {
                 try {
-                    textView.setBackgroundColor(android.graphics.Color.parseColor(colorBack))
-                } catch (e: Exception) {
 
+                    // textView.setBackgroundColor(android.graphics.Color.parseColor(colorBack))
+                    shape.setColor(Color.parseColor(colorBack))
+
+                } catch (e: Exception) {
+                    shape.setColor(Color.parseColor(android.R.color.transparent.toString()))
                 }
             }
             try {
-                textView.setTextColor(android.graphics.Color.parseColor(colorText))
+                textView.setTextColor(Color.parseColor(colorText))
             } catch (e: Exception) {
+                textView.setTextColor(Color.BLACK)
             }
+            textView.setBackgroundDrawable(shape)
+
             textView.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP, textSize)
             textView.typeface = helper.getTypeFace(1)
 
@@ -355,7 +367,7 @@ class AnimationAction(context: Context, val view: View) {
             //    3 -> Utile.scale13(listOfTextview, dur)
 
 
-          //  4 -> Utile.godAppearFromTwoPlaces(listOfTextview, dur)
+            //  4 -> Utile.godAppearFromTwoPlaces(listOfTextview, dur)
             10 -> Utile.scale_swing(0, talker, listOfTextview, dur)
             11 -> Utile.scale_swing(1, talker, listOfTextview, dur)
             12 -> Utile.scale_swing(2, talker, listOfTextview, dur)
