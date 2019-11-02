@@ -3,6 +3,7 @@ package com.example.yhaa16
 import android.content.Context
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import com.github.florent37.viewanimator.ViewAnimator
 import kotlinx.android.synthetic.main.god_layout.view.*
 import kotlinx.android.synthetic.main.man_layout.view.*
@@ -219,9 +220,16 @@ class AnimationAction(context: Context, val view: View) {
             if (colorBack == "none") {
                 textView.setBackgroundResource(android.R.color.transparent)
             } else {
-                textView.setBackgroundColor(android.graphics.Color.parseColor(colorBack))
+                try {
+                    textView.setBackgroundColor(android.graphics.Color.parseColor(colorBack))
+                } catch (e: Exception) {
+
+                }
             }
-            textView.setTextColor(android.graphics.Color.parseColor(colorText))
+            try {
+                textView.setTextColor(android.graphics.Color.parseColor(colorText))
+            } catch (e: Exception) {
+            }
             textView.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP, textSize)
             textView.typeface = helper.getTypeFace(1)
 

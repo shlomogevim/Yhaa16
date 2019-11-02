@@ -39,6 +39,7 @@
             style="@style/SimpleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_red_border"
             android:gravity="center_horizontal"
             tools:text="Man Speaking0" />
 
@@ -47,6 +48,7 @@
             style="@style/SimpleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_red_border"
             android:gravity="center_horizontal"
             tools:text="Man Speaking1" />
 
@@ -55,6 +57,7 @@
             style="@style/SimpleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_red_border"
             android:gravity="center_horizontal"
             tools:text="Man Speaking2" />
 
@@ -63,6 +66,7 @@
             style="@style/SimpleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_red_border"
             android:gravity="center_horizontal"
             android:typeface="normal"
             tools:text="Man Speaking3" />
@@ -72,6 +76,7 @@
             style="@style/SimpleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_red_border"
             android:gravity="center_horizontal"
             android:typeface="normal"
             tools:text="Man Speaking4" />
@@ -81,6 +86,7 @@
             style="@style/SimpleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_red_border"
             android:gravity="center_horizontal"
             android:typeface="normal"
             tools:text="Man Speaking5" />
